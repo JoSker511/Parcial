@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualización de Grafos</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+    <style>
+        body {
+            background-color: rgb(248, 255, 122);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Estilos para el título */
+        #app-title {
+            text-align: center;
+            color: rgba(255, 255, 0, 0.876);
+            font-size: 24px;
+            margin-top: 20px;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+
+        /* Estilos para los nodos */
+        .node-label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+<h2 id="graph-title">Aplicación de Grafos Interactiva</h2>
+
+<!-- Botones para mostrar las matrices -->
+<button id="btnMostrarAdyacencia">Mostrar Matriz de Adyacencia</button>
+<button id="btnMostrarIncidencia">Mostrar Matriz de Incidencia</button>
+
+
+<button id="btnMostrarDijkstra">Mostrar Resultados Dijkstra</button>
+<div id="resultadosDijkstra"></div>
+<select id="nodoInicio">
+    <!-- Opciones de nodos de inicio -->
+</select>
+
+<select id="nodoFinal">
+    <!-- Opciones de nodos finales -->
+</select>
+
+<!-- Contenedor para mostrar las matrices -->
+<div id="matricesContainer"></div>
+
+<!-- Contenido para editar nodos y aristas -->
+<div id="node-popUp">
+    <span id="node-operation">Nodo</span> <br />
+    <table style="margin: auto">
+        <tbody>
+        <tr>
+            <td>id</td>
+            <td><input id="node-id" value="nuevo valor" /></td>
+        </tr>
+        <tr>
+            <td>label</td>
+            <td><input id="node-label" value="nuevo valor" /></td>
+        </tr>
+        </tbody>
+    </table>
+    <input type="button" value="guardar" id="node-saveButton" />
+    <input type="button" value="cancelar" id="node-cancelButton" />
+</div>
+
+<div id="edge-popUp">
+    <span id="edge-operation">Arista</span> <br />
+    <table style="margin: auto">
+        <tbody>
+        <tr>
+            <td>label</td>
+            <td><input id="edge-label" value="nuevo valor" /></td>
+        </tr>
+        <tr>
+            <td>Tipo:</td>
+            <td>
+                <select id="edge-type">
+                    <option value="uni">Unidireccional</option>
+                    <option value="bi">Bidireccional</option>
+                </select>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <input type="button" value="guardar" id="edge-saveButton" />
+    <input type="button" value="cancelar" id="edge-cancelButton" />
+</div>
+
+<!-- Contenedor para el grafo -->
+<div id="mynetwork"></div>
+
+<script type="text/javascript" src="../scripts/script.js"></script>
+</body>
+</html>

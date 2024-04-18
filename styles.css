@@ -1,0 +1,117 @@
+/* Estilos generales para el cuerpo y el selector de idioma */
+body,
+select {
+  font: 10pt sans; 
+}
+
+/* Estilos para el contenedor de la red de grafos */
+#mynetwork {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: #000000;
+}
+
+#graph-title {
+  text-align: center; /* Centra el texto horizontalmente */
+  margin-top: 20px; /* Espacio superior */
+  position: absolute; /* Posiciona de manera absoluta */
+  top: 20px; /* Distancia desde la parte superior */
+  right: 25%; /* Ubica el título en la mitad derecha */
+  transform: translateX(50%); /* Centra horizontalmente */
+}
+
+/* Estilos para la tabla de leyenda */
+table.legend_table {
+  font-size: 11px;
+  border-width: 1px;
+  border-color: #ffffff;
+  border-style: solid;
+}
+table.legend_table,
+td {
+  border-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+  padding: 2px;
+}
+
+/* Estilos para el contenido de la tabla */
+div.table_content {
+  width: 80px;
+  text-align: center;
+}
+
+/* Estilos para la descripción de la tabla */
+div.table_description {
+  width: 100px;
+}
+
+/* Estilos para las operaciones */
+#operation {
+  font-size: 28px;
+}
+
+/* Estilos para la ventana emergente de nodo */
+#node-popUp {
+  display: none;
+  position: absolute;
+  top: 350px;
+  left: 170px;
+  z-index: 299;
+  width: 250px;
+  height: 120px;
+  background-color: #0091ff;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Estilos para la ventana emergente de arista */
+#edge-popUp {
+  display: none;
+  position: absolute;
+  top: 350px;
+  left: 170px;
+  z-index: 299;
+  width: 250px;
+  height: 90px;
+  background-color: #ffd903;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+#btnMostrarAdyacencia {
+  position: absolute;
+  top: 80px; /* Ajusta según el espacio que deseas entre el título y el botón */
+  left: 75%; /* Centra el botón horizontalmente */
+  transform: translateX(-50%); /* Centra el botón horizontalmente */
+}
+
+#btnMostrarIncidencia {
+  position: absolute;
+  top: 120px; /* Ajusta según el espacio que deseas entre los botones */
+  left: 75%; /* Centra el botón horizontalmente */
+  transform: translateX(-50%); /* Centra el botón horizontalmente */
+}
+
+#matricesContainer {
+  position: absolute;
+  top: 180px; /* Ajusta según el espacio que deseas entre los botones y el contenedor de matrices */
+  left: 75%; /* Centra el contenedor horizontalmente */
+  transform: translateX(-50%); /* Centra el contenedor horizontalmente */
+}
+
+/* Ajustar el estilo CSS para cambiar la posición de la tabla */
+#resultadosDijkstra {
+  position: absolute; /* O puedes usar 'relative' dependiendo de tus necesidades */
+  top: 180px; /* Ajusta estos valores según la posición deseada */
+  left: 75%;
+}
